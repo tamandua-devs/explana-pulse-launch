@@ -2,14 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Explana Geral - Ultra Modern Design System 
+All colors MUST be HSL. Vivid, translucent, vibrant theme.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand Colors - Vivid & Vibrant */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 5%;
+    --brand-red: 355 85% 60%;
+    --brand-red-vivid: 355 95% 55%;
+    --brand-black: 0 0% 8%;
+    --brand-white: 0 0% 100%;
+    
+    /* Glassmorphism & Effects */
+    --glass-bg: 0 0% 100% / 0.1;
+    --glass-border: 0 0% 100% / 0.2;
+    --glass-shadow: 0 0% 0% / 0.1;
+    
+    /* Gradients - Energy & Innovation */
+    --gradient-primary: linear-gradient(135deg, hsl(355 85% 60%), hsl(355 95% 75%));
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.1), hsl(0 0% 100% / 0.05));
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(355 85% 60%), hsl(355 95% 55%), hsl(0 0% 8%));
+    
+    /* Shadows & Glow Effects */
+    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.1);
+    --shadow-vivid: 0 10px 40px hsl(355 85% 60% / 0.3);
+    --shadow-floating: 0 20px 60px hsl(0 0% 0% / 0.15);
+    --glow-red: 0 0 30px hsl(355 85% 60% / 0.5);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-glass: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -101,5 +128,89 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Glassmorphism Utilities */
+@layer utilities {
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .glass-strong {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(30px);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .shadow-vivid {
+    box-shadow: var(--shadow-vivid);
+  }
+  
+  .shadow-floating {
+    box-shadow: var(--shadow-floating);
+  }
+  
+  .glow-red {
+    box-shadow: var(--glow-red);
+  }
+}
+
+/* Custom Animations */
+@layer components {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  .stacking-card {
+    transition: var(--transition-smooth);
+    transform-origin: top center;
+  }
+  
+  .stacking-card.stacked {
+    transform: translateY(-20px) scale(0.95);
+    z-index: 10;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(5px) rotate(-1deg); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px hsl(355 85% 60% / 0.3); }
+  100% { box-shadow: 0 0 40px hsl(355 85% 60% / 0.6), 0 0 60px hsl(355 85% 60% / 0.3); }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
