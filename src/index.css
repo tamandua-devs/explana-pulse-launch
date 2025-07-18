@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -182,14 +183,37 @@ All colors MUST be HSL. Vivid, translucent, vibrant theme.
     animation: slideUp 0.6s ease-out forwards;
   }
   
+  /* Optimized Stacking Cards */
   .stacking-card {
-    transition: var(--transition-smooth);
-    transform-origin: top center;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    will-change: transform, box-shadow, z-index;
+    isolation: isolate;
   }
   
-  .stacking-card.stacked {
-    transform: translateY(-20px) scale(0.95);
-    z-index: 10;
+  /* Performance optimizations for mobile */
+  @media (max-width: 768px) {
+    .stacking-card {
+      transform: translateZ(0);
+    }
+  }
+  
+  /* Smooth scroll optimizations */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .stacking-card {
+      transform: none !important;
+      transition: none !important;
+    }
+    
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 

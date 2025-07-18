@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+
 import { Camera, Megaphone, BarChart3, Headphones, Gift, Zap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useScrollStacking } from "@/hooks/useScrollStacking";
 
 const services = [
   {
@@ -54,34 +55,13 @@ const services = [
 ];
 
 const ServicesCards = () => {
-  const [visibleCards, setVisibleCards] = useState<number[]>([]);
-  const cardsRef = useRef<HTMLDivElement[]>([]);
-
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "-100px 0px"
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const cardIndex = parseInt(entry.target.getAttribute('data-index') || '0');
-        
-        if (entry.isIntersecting) {
-          setVisibleCards(prev => [...prev.filter(i => i !== cardIndex), cardIndex]);
-        }
-      });
-    }, observerOptions);
-
-    cardsRef.current.forEach((card) => {
-      if (card) observer.observe(card);
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  const { containerRef, setCardRef, getCardStyle } = useScrollStacking(services.length);
 
   return (
-    <section className="py-24 bg-gradient-to-br from-background to-gray-50 relative overflow-hidden">
+    <section 
+      ref={containerRef}
+      className="py-24 bg-gradient-to-br from-background to-gray-50 relative overflow-hidden"
+    >
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-32 right-20 w-40 h-40 bg-brand-red/5 rounded-full blur-3xl" />
@@ -100,26 +80,22 @@ const ServicesCards = () => {
           </p>
         </div>
 
-        {/* Cards grid with stacking effect */}
-        <div className="space-y-8 md:space-y-16">
+        {/* Cards with stacking effect */}
+        <div className="relative space-y-8 md:space-y-16">
           {services.map((service, index) => {
-            const isVisible = visibleCards.includes(index);
             const IconComponent = service.icon;
             
             return (
               <Card
                 key={index}
-                ref={(el) => {
-                  if (el) cardsRef.current[index] = el;
-                }}
-                data-index={index}
+                ref={(el) => setCardRef(index, el)}
+                style={getCardStyle(index)}
                 className={`
-                  stacking-card group
-                  ${isVisible ? 'stacked' : ''}
+                  stacking-card group relative
                   bg-gradient-to-br ${service.color}
                   border-0 shadow-floating
                   hover:shadow-vivid
-                  transition-all duration-500
+                  will-change-transform
                   ${index % 2 === 0 ? 'md:ml-0' : 'md:ml-32'}
                 `}
               >
