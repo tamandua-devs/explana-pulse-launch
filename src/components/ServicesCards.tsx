@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Camera, Megaphone, BarChart3, Headphones, Gift, Zap } from "lucide-react";
+import { Camera, Megaphone, BarChart3, Headphones, Gift, Zap, Globe } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const services = [
@@ -28,27 +28,27 @@ const services = [
     color: "from-brand-red-vivid to-pink-500"
   },
   {
-    icon: Headphones,
-    title: "Suporte Ágil",
-    subtitle: "Atendimento Humanizado",
-    description: "Nossa equipe está sempre disponível para oferecer suporte rápido e personalizado às suas necessidades.",
-    features: ["Atendimento 24/7", "Gestão dedicada", "Suporte técnico", "Consultoria estratégica"],
+    icon: Globe,
+    title: "Landing Pages",
+    subtitle: "Páginas que convertem visitantes em clientes",
+    /*description: "Criamos landing pages otimizadas para conversão, focadas em resultados.",*/
+    features: ["Páginas modernas e responsivas", "Integração com WhatsApp", "Otimização para conversão", "Consultoria estratégica"],
     color: "from-gray-700 to-brand-black"
   },
   {
     icon: Gift,
-    title: "Impulsionamento Gratuito",
-    subtitle: "Instagram Boost",
-    description: "Oferecemos impulsionamento gratuito nas primeiras campanhas para você ver resultados desde o primeiro dia.",
-    features: ["Boost inicial grátis", "Segmentação avançada", "Otimização contínua", "Relatórios de performance"],
+    title: "Conheça o pacote completo de divulgações",
+    subtitle: "Acompanhe seu sucesso",
+    description: "Impulsionamento de R$30,00 no Instagram.",
+    features: ["Conversa Inicial", "Gravação Profissional", "Edição de Qualidade", "Impulsionamento Gratuito"],
     color: "from-brand-red to-orange-500"
   },
   {
     icon: Zap,
-    title: "Transformação Digital",
-    subtitle: "Inovação Completa",
-    description: "Revolucionamos sua presença digital com soluções inovadoras que geram impacto real no seu negócio.",
-    features: ["Website otimizado", "E-commerce", "Automações", "Integração de sistemas"],
+    title: "Designer Digital",
+    subtitle: "Designs para social media",
+    description: "Revolucionamos sua identidade visual. Quem é visto vende.",
+    features: ["Criação de posts que chamam a atenção do público", "Artes de alta qualidade", "Posts com a personalidade do seu negócio", "Integração de sistemas"],
     color: "from-purple-600 to-brand-red-vivid"
   }
 ];

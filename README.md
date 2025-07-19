@@ -1,73 +1,96 @@
-# Welcome to your Lovable project
+# Explana Pulse Launch
 
-## Project info
+## Descrição do Projeto
 
-**URL**: https://lovable.dev/projects/e6486858-991d-4a6d-8f0e-09eb3d123ad7
+Este projeto é uma aplicação web desenvolvida com tecnologias modernas para fornecer uma interface de usuário responsiva e interativa. Ele utiliza React, TypeScript e Tailwind CSS, com suporte adicional de bibliotecas como shadcn-ui para componentes de UI.
 
-## How can I edit this code?
+## Tecnologias Utilizadas
 
-There are several ways of editing your application.
+- **Vite**: Ferramenta de build rápida para desenvolvimento web.
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **Tailwind CSS**: Framework CSS utilitário para estilização.
+- **shadcn-ui**: Conjunto de componentes de UI acessíveis e reutilizáveis.
 
-**Use Lovable**
+## Estrutura do Projeto
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e6486858-991d-4a6d-8f0e-09eb3d123ad7) and start prompting.
+A estrutura do projeto está organizada da seguinte forma:
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── assets/          # Recursos estáticos como imagens
+├── components/      # Componentes reutilizáveis
+│   ├── ui/          # Componentes de UI (botões, tabelas, etc.)
+├── hooks/           # Hooks personalizados
+├── lib/             # Funções utilitárias
+├── pages/           # Páginas principais da aplicação
+├── App.css          # Estilos globais
+├── App.tsx          # Componente principal da aplicação
+├── main.tsx         # Ponto de entrada da aplicação
 ```
 
-**Edit a file directly in GitHub**
+## Como Executar o Projeto Localmente
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Siga os passos abaixo para configurar e executar o projeto localmente:
 
-**Use GitHub Codespaces**
+1. **Clone o repositório**:
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
+   cd explana-pulse-launch
+   ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
 
-## What technologies are used for this project?
+3. **Inicie o servidor de desenvolvimento**:
+   ```bash
+   npm run dev
+   ```
 
-This project is built with:
+4. **Acesse a aplicação**:
+   Abra o navegador e acesse `http://localhost:5173`.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Scripts Disponíveis
 
-## How can I deploy this project?
+- `npm run dev`: Inicia o servidor de desenvolvimento.
+- `npm run build`: Gera a build de produção.
+- `npm run preview`: Visualiza a build de produção localmente.
+- `npm run lint`: Executa o linter para verificar problemas no código.
 
-Simply open [Lovable](https://lovable.dev/projects/e6486858-991d-4a6d-8f0e-09eb3d123ad7) and click on Share -> Publish.
+## Configuração do Tailwind CSS
 
-## Can I connect a custom domain to my Lovable project?
+O arquivo de configuração do Tailwind está localizado em `tailwind.config.ts`. Ele define temas personalizados, extensões e plugins utilizados no projeto.
 
-Yes, you can!
+## Configuração do TypeScript
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+O projeto utiliza múltiplos arquivos de configuração do TypeScript:
+- `tsconfig.json`: Configuração base.
+- `tsconfig.app.json`: Configuração específica para a aplicação.
+- `tsconfig.node.json`: Configuração para scripts Node.js.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Como Contribuir
+
+1. Faça um fork do repositório.
+2. Crie uma branch para sua feature ou correção:
+   ```bash
+   git checkout -b minha-feature
+   ```
+3. Faça commit das suas alterações:
+   ```bash
+   git commit -m "Descrição da alteração"
+   ```
+4. Envie suas alterações:
+   ```bash
+   git push origin minha-feature
+   ```
+5. Abra um Pull Request.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
+
+## Contato
+
+Para dúvidas ou sugestões, entre em contato com a equipe de desenvolvimento em [tamandua-devs](mailto:tamandua-devs@example.com).

@@ -1,4 +1,6 @@
-import { Instagram, Linkedin, Mail, Phone, MapPin, Heart } from "lucide-react";
+import { Instagram, Phone, MapPin, Heart } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
@@ -28,21 +30,15 @@ const Footer = () => {
             <div className="flex gap-4">
               <a
                 href="#"
-                className="glass-strong p-3 rounded-xl text-brand-white hover:text-brand-red hover:scale-110 transition-all duration-300 group"
+                className="glass-strong p-3 rounded-xl text-brand-white hover:text-brand-red hover:scale-110 transition-all duration-300 group flex items-center justify-center"
               >
                 <Instagram className="w-6 h-6" />
               </a>
               <a
-                href="#"
-                className="glass-strong p-3 rounded-xl text-brand-white hover:text-brand-red hover:scale-110 transition-all duration-300 group"
+                href="https://wa.me/5521994798107"
+                className="glass-strong p-3 rounded-xl text-brand-white hover:text-brand-red hover:scale-110 transition-all duration-300 group flex items-center justify-center"
               >
-                <Linkedin className="w-6 h-6" />
-              </a>
-              <a
-                href="mailto:contato@explanageral.com.br"
-                className="glass-strong p-3 rounded-xl text-brand-white hover:text-brand-red hover:scale-110 transition-all duration-300 group"
-              >
-                <Mail className="w-6 h-6" />
+                <FaWhatsapp className="w-6 h-6" />
               </a>
             </div>
           </div>
@@ -82,19 +78,19 @@ const Footer = () => {
                     href="tel:+5511999999999"
                     className="text-brand-white/70 hover:text-brand-red transition-colors duration-300 text-sm"
                   >
-                    (11) 99999-9999
+                    (21) 99479-8107
                   </a>
                 </div>
               </div>
               
               <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-brand-red mt-1 shrink-0" />
+                <Phone className="w-5 h-5 text-brand-red mt-1 shrink-0" />
                 <div>
                   <a
-                    href="mailto:contato@explanageral.com.br"
+                    href="https://wa.me/5521994798107"
                     className="text-brand-white/70 hover:text-brand-red transition-colors duration-300 text-sm"
                   >
-                    contato@explanageral.com.br
+                    (11) 99479-8107
                   </a>
                 </div>
               </div>

@@ -1,4 +1,5 @@
 import { ArrowRight, Play, Sparkles } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -26,32 +27,32 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-brand-red/20 text-brand-white px-4 py-2 rounded-full text-sm font-medium mb-8 glass animate-glow">
             <Sparkles className="w-4 h-4" />
-            Agência Referência em Marketing Digital
+            Divulgue seu negócio
           </div>
 
           {/* Main headline */}
           <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-            <span className="text-brand-white">Transforme Seu</span>
+            <span className="text-brand-white">Divulgue o seu </span>
             <br />
-            <span className="gradient-text">Negócio Local</span>
+            <span className="gradient-text">Negócio</span>
             <br />
-            <span className="text-brand-white">em Autoridade</span>
+            {/* <span className="text-brand-white">em Autoridade</span> */}
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-brand-white/90 mb-12 max-w-4xl mx-auto font-light">
-            Democratizamos o marketing digital para pequenos negócios com soluções completas, 
-            acessíveis e de alto impacto visual. Impulsione suas vendas e fortaleça sua presença online.
+            Aumente suas vendas com divulgações que chamam a atenção!
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-brand-red hover:bg-brand-red-vivid text-brand-white px-8 py-4 text-lg font-semibold rounded-2xl shadow-vivid hover:shadow-floating transition-all duration-300 hover:scale-105 animate-glow group"
+            <Button
+              size="lg"
+              className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg font-semibold rounded-2xl shadow-vivid hover:shadow-floating transition-all duration-300 hover:scale-105 animate-glow group"
+              style={{ background: 'linear-gradient(135deg, #25D366, #128C7E)' }}
             >
-              Análise Gratuita do Seu Negócio
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <FaWhatsapp size={24} className="text-white mr-3" />
+              Eu quero divulgar o meu negócio
             </Button>
             
             <Button 
@@ -68,15 +69,15 @@ const Hero = () => {
           <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-8 text-brand-white/80">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-brand-red rounded-full animate-pulse" />
-              <span className="text-sm font-medium">+500 Negócios Transformados</span>
+              <span className="text-sm font-medium">+50 Negócios Transformados</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-brand-red rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-              <span className="text-sm font-medium">ROI Médio de 300%</span>
+              <span className="text-sm font-medium">ROI Médio de 30%</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-brand-red rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
-              <span className="text-sm font-medium">Suporte 24/7</span>
+              <span className="text-sm font-medium">Atração e promoção</span>
             </div>
           </div>
         </div>

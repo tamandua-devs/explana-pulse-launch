@@ -16,10 +16,9 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
+    { label: "Jornada", href: "#jornada" },
+    { label: "Perguntas", href: "#perguntas" },
     { label: "Serviços", href: "#servicos" },
-    { label: "Cases", href: "#portfolio" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Contato", href: "#contato" }
   ];
 
   return (
@@ -68,7 +67,7 @@ const Navigation = () => {
             <Button
               className="bg-brand-red hover:bg-brand-red-vivid text-brand-white px-6 py-3 rounded-xl font-semibold shadow-vivid hover:shadow-floating transition-all duration-300 hover:scale-105 group"
             >
-              Análise Gratuita
+              CONTATO
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
@@ -112,7 +111,7 @@ const Navigation = () => {
                 className="w-full bg-brand-red hover:bg-brand-red-vivid text-brand-white py-3 rounded-xl font-semibold transition-all duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Análise Gratuita
+                CONTATO
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </div>
