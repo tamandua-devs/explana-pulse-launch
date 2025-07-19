@@ -8,12 +8,12 @@ import {
 
 const faqData = [
   {
-    question: "Como funciona a análise gratuita do meu negócio?",
-    answer: "Nossa análise gratuita inclui auditoria completa da sua presença digital atual, identificação de oportunidades de crescimento, análise da concorrência e proposta estratégica personalizada. Tudo sem compromisso e em até 24 horas."
+    question: "Não tenho uma loja física, posso divulgar meu negócio?",
+    answer: "SIM! Nós do Explana Geral vamos planejar a melhor maneira de divulgar o seu negócio."
   },
   {
-    question: "Vocês realmente fazem produção audiovisual no local?",
-    answer: "Sim! Nossa equipe vai até o seu estabelecimento com equipamentos profissionais para criar fotos e vídeos de alta qualidade. Isso garante autenticidade e mostra o verdadeiro ambiente do seu negócio, criando maior conexão com seus clientes."
+    question: "Quanto tempo o meu vídeo será divulgado?",
+    answer: "A sua divulgação ficará PERMANENTE em nosso perfil e será impulsionado durante 3 dias com o investimento por nossa conta.maior conexão com seus clientes."
   },
   {
     question: "O que está incluso no impulsionamento gratuito do Instagram?",
@@ -21,7 +21,7 @@ const faqData = [
   },
   {
     question: "Qual é o investimento para contratar os serviços?",
-    answer: "Nossos planos são personalizados conforme as necessidades e objetivos de cada negócio. Oferecemos soluções acessíveis com excelente custo-benefício. Entre em contato para receber uma proposta sob medida para sua empresa."
+    answer: "Nossos planos são personalizados conforme as necessidades e objetivos de cada negócio. Oferecemos soluções a partir de R$70 com excelente custo-benefício. Entre em contato para receber uma proposta sob medida para sua empresa."
   },
   {
     question: "Em quanto tempo posso ver os primeiros resultados?",

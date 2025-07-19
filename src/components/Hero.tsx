@@ -27,7 +27,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-brand-red/20 text-brand-white px-4 py-2 rounded-full text-sm font-medium mb-8 glass animate-glow">
             <Sparkles className="w-4 h-4" />
-            Divulgue seu negócio
+            Mais de 2 Milhões de Visualizações
           </div>
 
           {/* Main headline */}
@@ -69,15 +69,15 @@ const Hero = () => {
           <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-8 text-brand-white/80">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-brand-red rounded-full animate-pulse" />
-              <span className="text-sm font-medium">+50 Negócios Transformados</span>
+              <span className="font-medium" style={{ fontSize: '1.25rem' }}>+50 Negócios Transformados</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-brand-red rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-              <span className="text-sm font-medium">ROI Médio de 30%</span>
+              <span className="font-medium" style={{ fontSize: '1.25rem' }}>ROI Médio de 300%</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-brand-red rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
-              <span className="text-sm font-medium">Atração e promoção</span>
+              <span className="font-medium" style={{ fontSize: '1.25rem' }}>Atração e promoção pro seu negócio</span>
             </div>
           </div>
         </div>

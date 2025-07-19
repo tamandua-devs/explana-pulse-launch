@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const services = [
   {
     icon: Camera,
-    title: "Produção Audiovisual",
+    title: "Story Maker",
     subtitle: "Profissional no Local",
     description: "Criamos conteúdo visual de alta qualidade direto no seu negócio, com equipamentos profissionais e equipe especializada.",
     features: ["Fotos profissionais", "Vídeos promocionais", "Stories e Reels", "Cobertura de eventos"],
@@ -13,10 +13,10 @@ const services = [
   },
   {
     icon: Megaphone,
-    title: "Gestão de Redes Sociais",
-    subtitle: "Presença Online Marcante",
+    title: "Social Media",
+    subtitle: "Gestão de redes sociais",
     description: "Desenvolvemos estratégias personalizadas para aumentar seu engajamento e converter seguidores em clientes.",
-    features: ["Planejamento editorial", "Criação de conteúdo", "Gestão de comunidade", "Campanhas pagas"],
+    features: ["Planejamento editorial", "Criação de conteúdo", "Stories e Reels profissionais", "Campanhas pagas"],
     color: "from-brand-black to-gray-800"
   },
   {
@@ -39,7 +39,7 @@ const services = [
     icon: Gift,
     title: "Conheça o pacote completo de divulgações",
     subtitle: "Acompanhe seu sucesso",
-    description: "Impulsionamento de R$30,00 no Instagram.",
+    description: "Impulsionamento gratuito de R$30,00 no Instagram.",
     features: ["Conversa Inicial", "Gravação Profissional", "Edição de Qualidade", "Impulsionamento Gratuito"],
     color: "from-brand-red to-orange-500"
   },
@@ -92,8 +92,8 @@ const ServicesCards = () => {
         {/* Section header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-black mb-6">
-            <span className="text-brand-black">Soluções</span>{" "}
-            <span className="gradient-text">Completas</span>
+            <span className="text-brand-black">Serviços</span>{" "}
+            { <span className="gradient-text">Oferecidos</span>}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Oferecemos tudo que seu negócio precisa para dominar o digital e conquistar mais clientes
