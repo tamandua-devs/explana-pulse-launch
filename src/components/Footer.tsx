@@ -36,6 +36,8 @@ const Footer = () => {
               </a>
               <a
                 href="https://wa.me/5521994798107"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="glass-strong p-3 rounded-xl text-brand-white hover:text-brand-red hover:scale-110 transition-all duration-300 group flex items-center justify-center"
               >
                 <FaWhatsapp className="w-6 h-6" />
@@ -99,8 +101,8 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-brand-red mt-1 shrink-0" />
                 <div>
                   <p className="text-brand-white/70 text-sm">
-                    São Paulo, SP<br />
-                    Atendimento em todo Brasil
+                    Rio de Janeiro, RJ<br />
+                    Sepetiba e Campo Grande
                   </p>
                 </div>
               </div>
