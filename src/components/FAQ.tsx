@@ -24,12 +24,8 @@ const faqData = [
     answer: "Nossos planos são personalizados conforme as necessidades e objetivos de cada negócio. Oferecemos soluções a partir de R$70 com excelente custo-benefício. Entre em contato para receber uma proposta sob medida para sua empresa."
   },
   {
-    question: "Em quanto tempo posso ver os primeiros resultados?",
-    answer: "Geralmente nossos clientes começam a ver aumento no engajamento e alcance em 7-15 dias. Resultados mais consistentes em vendas e crescimento de seguidores aparecem entre 30-60 dias, dependendo do nicho e estratégia aplicada."
-  },
-  {
-    question: "Vocês atendem apenas negócios locais?",
-    answer: "Nosso foco principal são negócios locais, mas também atendemos empresas regionais e nacionais que buscam fortalecer sua presença digital. Nossa especialidade é humanizar marcas e criar conexões autênticas com o público-alvo."
+    question: "Eu terei acesso a esse vídeo?  Para postar na rede social do meu negócio?",
+    answer: "O vídeo da sua divulgação será postado simultaneamente no seu perfil profissional e no perfil do Explana Geral.."
   },
   {
     question: "Como é o suporte e acompanhamento dos resultados?",
