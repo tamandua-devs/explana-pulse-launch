@@ -45,7 +45,7 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex justify-center items-center">
             <Button
               size="lg"
               className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg font-semibold rounded-2xl shadow-vivid hover:shadow-floating transition-all duration-300 hover:scale-105 animate-glow group"
@@ -53,15 +53,6 @@ const Hero = () => {
             >
               <FaWhatsapp size={24} className="text-white mr-3" />
               Eu quero divulgar o meu negócio
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-brand-white/30 text-brand-white hover:bg-brand-white/10 px-8 py-4 text-lg rounded-2xl glass-strong backdrop-blur-sm group"
-            >
-              <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
-              Ver Cases de Sucesso
             </Button>
           </div>
 

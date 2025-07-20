@@ -3,6 +3,15 @@ import { Camera, Megaphone, BarChart3, Headphones, Gift, Zap, Globe } from "luci
 import { Card, CardContent } from "@/components/ui/card";
 
 const services = [
+    {
+    icon: Gift,
+    title: "Entenda sua jornada de divulgação",
+    subtitle: "Acompanhe seu sucesso",
+    description: "Impulsionamento gratuito de R$30,00 no Instagram.",
+    features: ["Conversa Inicial", "Gravação Profissional", "Edição de Qualidade", "Impulsionamento Gratuito"],
+    color: "from-brand-red to-orange-500",
+    hidden: false
+  },
   {
     icon: Camera,
     title: "Story Maker",
@@ -28,17 +37,9 @@ const services = [
     /*description: "Criamos landing pages otimizadas para conversão, focadas em resultados.",*/
     features: ["Páginas modernas e responsivas", "Integração com WhatsApp", "Otimização para conversão", "Consultoria estratégica"],
     color: "from-gray-700 to-brand-black",
-    hidden: true
-  },
-  {
-    icon: Gift,
-    title: "Conheça o pacote completo de divulgações",
-    subtitle: "Acompanhe seu sucesso",
-    description: "Impulsionamento gratuito de R$30,00 no Instagram.",
-    features: ["Conversa Inicial", "Gravação Profissional", "Edição de Qualidade", "Impulsionamento Gratuito"],
-    color: "from-brand-red to-orange-500",
     hidden: false
   },
+
   {
     icon: Zap,
     title: "Designer Digital",

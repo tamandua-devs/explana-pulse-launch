@@ -31,10 +31,6 @@ const faqData = [
     question: "Como é o suporte e acompanhamento dos resultados?",
     answer: "Oferecemos suporte ágil via WhatsApp, relatórios mensais detalhados com métricas de performance, reuniões estratégicas regulares e ajustes contínuos na estratégia baseados nos resultados obtidos."
   },
-  {
-    question: "Posso cancelar o serviço quando quiser?",
-    answer: "Sim, trabalhamos com contratos flexíveis. Não acreditamos em fidelização forçada - nosso objetivo é entregar tanto valor que você não vai querer sair. A transparência e confiança são fundamentais na nossa relação."
-  }
 ];
 
 const FAQ = () => {
