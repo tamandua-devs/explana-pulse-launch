@@ -9,7 +9,8 @@ const services = [
     subtitle: "Profissional no Local",
     description: "Criamos conteúdo visual de alta qualidade direto no seu negócio, com equipamentos profissionais e equipe especializada.",
     features: ["Fotos profissionais", "Vídeos promocionais", "Stories e Reels", "Cobertura de eventos"],
-    color: "from-brand-red to-brand-red-vivid"
+    color: "from-brand-red to-brand-red-vivid",
+    hidden: false
   },
   {
     icon: Megaphone,
@@ -17,15 +18,8 @@ const services = [
     subtitle: "Gestão de redes sociais",
     description: "Desenvolvemos estratégias personalizadas para aumentar seu engajamento e converter seguidores em clientes.",
     features: ["Planejamento editorial", "Criação de conteúdo", "Stories e Reels profissionais", "Campanhas pagas"],
-    color: "from-brand-black to-gray-800"
-  },
-  {
-    icon: BarChart3,
-    title: "Análise e Otimização",
-    subtitle: "Resultados Mensuráveis",
-    description: "Monitoramos performance e otimizamos estratégias baseadas em dados reais para maximizar seus resultados.",
-    features: ["Relatórios detalhados", "Análise de concorrência", "ROI tracking", "Ajustes estratégicos"],
-    color: "from-brand-red-vivid to-pink-500"
+    color: "from-brand-black to-gray-800",
+    hidden: false
   },
   {
     icon: Globe,
@@ -33,7 +27,8 @@ const services = [
     subtitle: "Páginas que convertem visitantes em clientes",
     /*description: "Criamos landing pages otimizadas para conversão, focadas em resultados.",*/
     features: ["Páginas modernas e responsivas", "Integração com WhatsApp", "Otimização para conversão", "Consultoria estratégica"],
-    color: "from-gray-700 to-brand-black"
+    color: "from-gray-700 to-brand-black",
+    hidden: true
   },
   {
     icon: Gift,
@@ -41,7 +36,8 @@ const services = [
     subtitle: "Acompanhe seu sucesso",
     description: "Impulsionamento gratuito de R$30,00 no Instagram.",
     features: ["Conversa Inicial", "Gravação Profissional", "Edição de Qualidade", "Impulsionamento Gratuito"],
-    color: "from-brand-red to-orange-500"
+    color: "from-brand-red to-orange-500",
+    hidden: false
   },
   {
     icon: Zap,
@@ -49,7 +45,8 @@ const services = [
     subtitle: "Designs para social media",
     description: "Revolucionamos sua identidade visual. Quem é visto vende.",
     features: ["Criação de posts que chamam a atenção do público", "Artes de alta qualidade", "Posts com a personalidade do seu negócio", "Integração de sistemas"],
-    color: "from-purple-600 to-brand-red-vivid"
+    color: "from-purple-600 to-brand-red-vivid",
+    hidden: false
   }
 ];
 
