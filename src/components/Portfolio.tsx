@@ -2,35 +2,36 @@ import { useState } from "react";
 import { Play, ExternalLink, TrendingUp, Users, Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import choperiaRitmusImg from "@/assets/choperia-ritmus1.jpg";
 
 const portfolioItems = [
   {
     id: 1,
-    title: "Restaurante Villa Italiana",
-    category: "Gastronomia",
+    title: "Chopperia do Ritmus",
+    category: "Restaurante & Bar",
     results: {
       engagement: "+280%",
-      followers: "+1.2K",
-      revenue: "+150%"
+      followers: "+900",
+      revenue: "+350%"
     },
-    description: "Transformamos um restaurante local em referência gastronômica através de conteúdo visual impactante e estratégia de engajamento.",
+    description: "Transformamos um restaurante local em referência regional através de conteúdo visual impactante e estratégia de engajamento.",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000",
     video: "https://player.vimeo.com/video/example1",
-    testimonial: "Nossa receita cresceu 150% em 3 meses. A Explana revolucionou nosso negócio!"
+    testimonial: "Nossa audiência cresceu 150% em 3 meses. A Explana revolucionou nosso negócio!"
   },
   {
     id: 2,
-    title: "Clínica Dra. Santos",
-    category: "Saúde & Bem-estar",
+    title: "Tempero Da Roça",
+    category: "Comida Mineira",
     results: {
       engagement: "+320%",
-      followers: "+2.1K",
+      followers: "+400",
       revenue: "+200%"
     },
     description: "Desenvolvemos autoridade digital e confiança através de conteúdo educativo e depoimentos autênticos de pacientes.",
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1000",
     video: "https://player.vimeo.com/video/example2",
-    testimonial: "Triplicamos nossa agenda em 2 meses. Conteúdo de qualidade faz toda diferença!"
+    testimonial: "Triplicamos nossos resultados em 2 meses. Conteúdo de qualidade faz toda diferença!"
   },
   {
     id: 3,
@@ -63,11 +64,11 @@ const Portfolio = () => {
         {/* Section header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-black mb-6">
-            <span className="text-brand-white">Cases de</span>{" "}
+            <span className="text-brand-white">Clientes de</span>{" "}
             <span className="gradient-text">Sucesso</span>
           </h2>
           <p className="text-xl text-brand-white/80 max-w-3xl mx-auto">
-            Veja como transformamos negócios locais em autoridades digitais com resultados comprovados
+            Veja como ajudamos negócios locais a aparecer mais e atrair mais clientes.
           </p>
         </div>
 
@@ -77,29 +78,64 @@ const Portfolio = () => {
           <div className="space-y-8">
             <Card className="glass-strong border-0 shadow-floating overflow-hidden group">
               <div className="relative">
-                <img
-                  src={portfolioItems[activeItem].image}
-                  alt={portfolioItems[activeItem].title}
-                  className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent" />
-                
-                {/* Play button overlay */}
-                <Button
-                  size="lg"
-                  className="absolute inset-0 w-full h-full bg-transparent hover:bg-brand-red/20 text-brand-white border-0 group-hover:scale-105 transition-all duration-300"
-                >
-                  <div className="glass-strong p-4 rounded-full">
-                    <Play className="w-8 h-8 fill-current" />
+                {activeItem === 0 ? (
+                  <div style={{ position: 'relative', width: '100%', height: '320px' }}>
+                    <img
+                      src={choperiaRitmusImg}
+                      alt="Chopperia Artesanal"
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
+                      className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <a
+                      href="https://www.instagram.com/reel/DLk9T3FuxND/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Assistir vídeo do restaurante no Instagram"
+                      title="Assistir vídeo do restaurante no Instagram"
+                      style={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        background: '#222b',
+                        borderRadius: '50%',
+                        width: '56px',
+                        height: '56px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        boxShadow: '0 2px 10px #0004',
+                        transition: 'background 0.2s',
+                        zIndex: 2
+                      }}
+                    >
+                      <svg width="32" height="32" fill="#fff" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </a>
+                    {/* Category badge */}
+                    <div className="absolute top-4 left-4">
+                      <span className="glass px-3 py-1 text-sm font-medium text-brand-white rounded-full">
+                        {portfolioItems[activeItem].category}
+                      </span>
+                    </div>
                   </div>
-                </Button>
-
-                {/* Category badge */}
-                <div className="absolute top-4 left-4">
-                  <span className="glass px-3 py-1 text-sm font-medium text-brand-white rounded-full">
-                    {portfolioItems[activeItem].category}
-                  </span>
-                </div>
+                ) : (
+                  <>
+                    <img
+                      src={portfolioItems[activeItem].image}
+                      alt={portfolioItems[activeItem].title}
+                      className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent" />
+                    {/* Category badge */}
+                    <div className="absolute top-4 left-4">
+                      <span className="glass px-3 py-1 text-sm font-medium text-brand-white rounded-full">
+                        {portfolioItems[activeItem].category}
+                      </span>
+                    </div>
+                  </>
+                )}
               </div>
 
               <CardContent className="p-8">
@@ -140,7 +176,7 @@ const Portfolio = () => {
                         {portfolioItems[activeItem].results.revenue}
                       </span>
                     </div>
-                    <p className="text-brand-white/60 text-sm">Faturamento</p>
+                    <p className="text-brand-white/60 text-sm">ROI</p>
                   </div>
                 </div>
 
