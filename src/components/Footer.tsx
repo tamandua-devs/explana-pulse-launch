@@ -75,7 +75,7 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-brand-red mt-1 shrink-0" />
                 <div>
                   <a
-                    href="tel:+5511999999999"
+                    href="tel:+5521994798107"
                     className="text-brand-white/70 hover:text-brand-red transition-colors duration-300 text-sm"
                   >
                     (21) 99479-8107
