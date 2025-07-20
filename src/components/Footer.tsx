@@ -50,20 +50,14 @@ const Footer = () => {
             <h4 className="text-xl font-bold text-brand-white mb-6">Serviços</h4>
             <ul className="space-y-3">
               {[
-                "Produção Audiovisual",
-                "Gestão de Redes Sociais",
-                "Análise e Otimização",
-                "Suporte Ágil",
+                "Story Maker",
+                "Social Media",
+                "Landing Pages",
                 "Impulsionamento Gratuito",
-                "Transformação Digital"
+                "Designer Digital"
               ].map((service, index) => (
                 <li key={index}>
-                  <a
-                    href="#"
-                    className="text-brand-white/70 hover:text-brand-red transition-colors duration-300 text-sm"
-                  >
-                    {service}
-                  </a>
+                  <span className="text-brand-white/70 text-sm">{service}</span>
                 </li>
               ))}
             </ul>
@@ -81,18 +75,6 @@ const Footer = () => {
                     className="text-brand-white/70 hover:text-brand-red transition-colors duration-300 text-sm"
                   >
                     (21) 99479-8107
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-brand-red mt-1 shrink-0" />
-                <div>
-                  <a
-                    href="https://wa.me/5521994798107"
-                    className="text-brand-white/70 hover:text-brand-red transition-colors duration-300 text-sm"
-                  >
-                    (11) 99479-8107
                   </a>
                 </div>
               </div>
