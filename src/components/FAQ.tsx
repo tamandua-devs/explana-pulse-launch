@@ -101,9 +101,6 @@ const FAQ = () => {
               >
                 Falar com Especialista
               </a>
-              <button className="inline-flex items-center justify-center border-2 border-brand-red text-brand-red hover:bg-brand-red hover:text-brand-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300">
-                Agendar Reunião
-              </button>
             </div>
           </div>
         </div>

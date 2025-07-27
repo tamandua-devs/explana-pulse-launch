@@ -21,7 +21,7 @@ const Footer = () => {
                 <span className="gradient-text">Explana</span> Geral
               </h3>
               <p className="text-brand-white/80 text-lg leading-relaxed max-w-md">
-                Democratizamos o marketing digital para pequenos negócios com soluções 
+                Marketing digital para pequenos negócios com soluções 
                 completas, acessíveis e de alto impacto visual.
               </p>
             </div>

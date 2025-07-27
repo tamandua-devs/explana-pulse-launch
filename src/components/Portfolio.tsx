@@ -2,50 +2,52 @@ import { useState } from "react";
 import { Play, ExternalLink, TrendingUp, Users, Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import choperiaRitmusImg from "@/assets/choperia-ritmus1.jpg";
+import choperiaRitmusImg from "@/assets/choperiaRitmus.png";
+import vrFitnessImg from "@/assets/vrFitness.png";
+import prensaBurgerImg from "@/assets/prensaBurger.png";
 
 const portfolioItems = [
   {
     id: 1,
-    title: "Chopperia do Ritmus",
+    title: "Choperia do Ritmus",
     category: "Restaurante & Bar",
     results: {
-      engagement: "+280%",
-      followers: "+900",
+      engagement: "+ 100 mil",
+      followers: "+ 9 mil",
       revenue: "+350%"
     },
-    description: "Transformamos um restaurante local em referência regional através de conteúdo visual impactante e estratégia de engajamento.",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000",
+    description: "Nesta longa parceria com a Choperia do Ritmus, utilizamos estratégias eficazes para divulgar e tornar esta empresa uma referência regional.",
+    image: choperiaRitmusImg,
     video: "https://player.vimeo.com/video/example1",
-    testimonial: "Nossa audiência cresceu 150% em 3 meses. A Explana revolucionou nosso negócio!"
+    testimonial: "Nossa audiência cresceu 150%. A Explana revolucionou nosso negócio!"
   },
   {
     id: 2,
-    title: "Tempero Da Roça",
-    category: "Comida Mineira",
+    title: "VR Moda Fitness",
+    category: "Fitness",
     results: {
-      engagement: "+320%",
-      followers: "+400",
-      revenue: "+200%"
+      engagement: "+13 mil",
+      followers: "+5000",
+      revenue: "+300%"
     },
-    description: "Desenvolvemos autoridade digital e confiança através de conteúdo educativo e depoimentos autênticos de pacientes.",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1000",
+    description: "Desenvolvemos autoridade digital e confiança através de conteúdo educativo e depoimentos autênticos de clientes e alunos.",
+    image: vrFitnessImg,
     video: "https://player.vimeo.com/video/example2",
-    testimonial: "Triplicamos nossos resultados em 2 meses. Conteúdo de qualidade faz toda diferença!"
+    testimonial: "Fiquei impressionada com a a qualidade da divulgação, eu adorei!"
   },
   {
     id: 3,
-    title: "Academia FitZone",
-    category: "Fitness",
+    title: "Prens & Burguer",
+    category: "Lanchonete",
     results: {
-      engagement: "+400%",
-      followers: "+3.5K",
-      revenue: "+250%"
+      engagement: "+ 14 mil",
+      followers: "+ 1000",
+      revenue: "+70%"
     },
-    description: "Criamos uma comunidade engajada com treinos ao vivo, transformações reais e conteúdo motivacional diário.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1000",
+    description: "Ajudamos a Prens & Burguer a se destacar no mercado local com campanhas criativas, promoções irresistíveis e uma presença digital marcante.",
+    image: prensaBurgerImg,
     video: "https://player.vimeo.com/video/example3",
-    testimonial: "Nunca tivemos tantos alunos novos! A estratégia da Explana é simplesmente perfeita."
+    testimonial: "Nunca tivemos tantos clientes novos! A estratégia da Explana é simplesmente perfeita."
   }
 ];
 
@@ -156,7 +158,7 @@ const Portfolio = () => {
                         {portfolioItems[activeItem].results.engagement}
                       </span>
                     </div>
-                    <p className="text-brand-white/60 text-sm">Engajamento</p>
+                    <p className="text-brand-white/60 text-sm">Visualizações</p>
                   </div>
                   
                   <div className="text-center">
@@ -248,6 +250,8 @@ const Portfolio = () => {
             <Button 
               variant="outline" 
               className="w-full border-brand-red text-brand-red hover:bg-brand-red hover:text-brand-white py-6 rounded-xl text-lg font-semibold transition-all duration-300"
+              onClick={() => window.open("https://www.instagram.com/o_explanaa_geral", "_blank", "noopener,noreferrer")}
+              aria-label="Ver todos os cases no Instagram"
             >
               Ver Todos os Cases
               <ExternalLink className="ml-2 w-5 h-5" />
