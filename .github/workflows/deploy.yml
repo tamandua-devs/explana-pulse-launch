@@ -58,7 +58,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            docker pull $GHCR_REPO:${{ steps.version.outputs.tag }}
+            docker pull ghcr.io/tamandua-devs/explana-pulse-launch:${{ steps.version.outputs.tag }}
             docker stop explana-pulse || true
             docker rm explana-pulse || true
-            docker run -d --name explana-pulse -p 8505:80 $GHCR_REPO:${{ steps.version.outputs.tag }}
+            docker run -d --name explana-pulse -p 8505:80 ghcr.io/tamandua-devs/explana-pulse-launch:${{ steps.version.outputs.tag }}
