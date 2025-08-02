@@ -1,12 +1,15 @@
-name: Build & Push Docker Image to GHCR
+name: Build, Tag e Deploy Explanageral Pulse
 
 on:
   push:
     branches:
       - main
 
+env:
+  GHCR_REPO: ghcr.io/tamandua-devs/explana-pulse-launch
+
 jobs:
-  build-and-push:
+  build-push-deploy:
     runs-on: ubuntu-latest
 
     permissions:
@@ -24,10 +27,38 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build da imagem Docker
+      - name: Definir próxima tag semântica
+        id: version
         run: |
-          docker build -t ghcr.io/${{ github.repository }}:0.0.1 .
+          TAGS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://ghcr.io/v2/tamandua-devs/explana-pulse-launch/tags/list | jq -r '.tags[]' | grep -E '^0\.0\.[0-9]+$' || true)
 
-      - name: Push da imagem para GHCR
+          LAST=$(echo "$TAGS" | sort -V | tail -n 1)
+          NEXT="0.0.1"
+
+          if [ -n "$LAST" ]; then
+            NUM=$(echo $LAST | cut -d. -f3)
+            NEXT="0.0.$((NUM+1))"
+          fi
+
+          echo "tag=$NEXT" >> $GITHUB_OUTPUT
+
+      - name: Build da imagem
         run: |
-          docker push ghcr.io/${{ github.repository }}:0.0.1
+          docker build -t $GHCR_REPO:${{ steps.version.outputs.tag }} .
+
+      - name: Push da imagem
+        run: |
+          docker push $GHCR_REPO:${{ steps.version.outputs.tag }}
+
+      - name: Deploy na VPS via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            docker pull $GHCR_REPO:${{ steps.version.outputs.tag }}
+            docker stop explana-pulse || true
+            docker rm explana-pulse || true
+            docker run -d --name explana-pulse -p 8505:80 $GHCR_REPO:${{ steps.version.outputs.tag }}
