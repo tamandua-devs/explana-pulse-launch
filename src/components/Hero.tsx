@@ -5,7 +5,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="jornada" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background with gradient overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center"

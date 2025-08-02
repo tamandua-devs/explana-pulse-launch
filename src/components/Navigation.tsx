@@ -44,7 +44,13 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item, index) => (
+            <a
+              href="#jornada"
+              className="text-sm font-medium text-white hover:text-red-500 transition-colors duration-200"
+            >
+              Jornada
+            </a>
+            {navItems.slice(1).map((item, index) => (
               <a
                 key={index}
                 href={item.href}
