@@ -18,7 +18,7 @@ const Navigation = () => {
 
   const navItems = [
     { label: "Jornada", href: "#jornada" },
-    { label: "Perguntas", href: "#perguntas" },
+    { label: "Perguntas", href: "#faq" },
     { label: "Serviços", href: "#servicos" },
   ];
 
