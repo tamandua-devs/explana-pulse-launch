@@ -1,5 +1,7 @@
 # Explana Pulse Launch
 
+[![Build, Tag e Deploy Explanageral Pulse](https://github.com/tamandua-devs/explana-pulse-launch/actions/workflows/deploy.yml/badge.svg)](https://github.com/tamandua-devs/explana-pulse-launch/actions/workflows/deploy.yml)
+
 ## Descrição do Projeto
 
 Este projeto é uma aplicação web desenvolvida com tecnologias modernas para fornecer uma interface de usuário responsiva e interativa. Ele utiliza React, TypeScript e Tailwind CSS, com suporte adicional de bibliotecas como shadcn-ui para componentes de UI.
