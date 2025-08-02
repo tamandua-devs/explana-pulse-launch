@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -35,12 +36,10 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-black">
-              <span className="gradient-text">Explana</span>{" "}
-              <span className={isScrolled ? "text-brand-black" : "text-brand-white"}>
-                Geral
-              </span>
-            </h1>
+            <Link to="/" className="flex items-center space-x-1">
+              <span className="text-2xl font-bold text-red-600">Explana</span>
+              <span className="text-2xl font-bold text-white">Geral</span>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
